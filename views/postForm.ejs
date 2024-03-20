@@ -1,0 +1,30 @@
+<%- include('partials/header.ejs') %>
+
+<% if (locals.checkEdit) { %>
+    <% if (locals.errorMessage) { %>
+        <p><%= errorMessage %></p>
+    <% } %>
+    <form action="/createpost" method="post">
+        <div class="container post-form-div">
+            <textarea name="post-title" id="edit-post-title"><%= postTitle %></textarea>
+            <textarea  id="edit-post-text" name="post-text" ><%= postArticle %></textarea>
+            <input id="save-post-btn" type="submit" value="Save">
+        </div>
+        
+    </form>
+    <% } else { %>
+
+        <% if (locals.errorMessage) { %>
+            <p><%= errorMessage %></p>
+        <% } %>
+        <form action="/createpost" method="post">
+            <div class="container post-form-div">
+                <textarea name="post-title" id="post-title" placeholder="Write the title of your article"></textarea>
+                <textarea  id="post-text" name="post-text" placeholder="Write Your Article"></textarea>
+                <input id="submit-post-btn" type="submit" value="Submit">
+            </div>
+            
+        </form>
+    <% } %>
+
+<%- include('partials/footer.ejs') %>

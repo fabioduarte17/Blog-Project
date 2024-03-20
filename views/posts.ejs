@@ -1,0 +1,22 @@
+<%- include('partials/header.ejs') %>
+
+<% if (postTitles.length === 0) { %>
+    <div id="posts-div">
+        <h1>There is no posts to show</h1>
+        <form action="/createpost" method="GET">
+            <input class="text-body-secondary" id="create-btn" type="submit" value="Create a Post">
+          </form>
+    </div>
+    <% } else { %>
+        <div class="container post-list-div">
+            <ul>
+                <% for (var i=0;i<postTitles.length;i++) { %>
+                    <li>
+                        <a class="title-link text-body-secondary" href="/post/<%= encodeURIComponent(postTitles[i]) %>"><%= postTitles[i] %></a>
+                    </li>
+                <% } %>
+            </ul>    
+        </div>
+    <% } %>
+
+<%- include('partials/footer.ejs') %>

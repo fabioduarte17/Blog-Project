@@ -1,0 +1,27 @@
+<%- include('partials/header.ejs') %>
+
+
+<% if (locals.checkDelete) { %>
+    <div id="delete-div">
+        <h1>Your post has been Deleted</h1>
+        <form action="/" method="GET">
+            <input class="text-body-secondary" id="create-btn" type="submit" value="Return to Home Page">
+          </form>
+    </div>
+        
+    <% } else { %>
+        <div class="container post-div">
+            <div id="post-btns">
+                <form action="/post" method="post">
+                    <input class="btns" type="submit" name="delete-btn" id="delete-btn" value="Delete">
+                </form>
+                <form action="/edit" method="get">
+                    <input class="btns" type="submit" name="edit-btn" id="edit-btn" value="Edit">
+                </form>
+            </div>
+            <h1><%= postTitle %></h1>
+            <p><%= articleContent %></p>
+        </div>
+    <% } %>
+
+    <%- include('partials/footer.ejs') %>

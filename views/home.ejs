@@ -1,0 +1,15 @@
+<%- include('partials/header.ejs') %>
+
+<div class="container home-div">
+    <h1>Welcome to <span class="text-body-secondary">THE BLOG</span></h1>
+    <div id="home-tbns-div">
+      <form action="/createpost" method="GET">
+        <input class="text-body-secondary" id="create-btn" type="submit" value="Create a POST">
+      </form> 
+      <form action="/posts" method="GET">
+        <input class="text-body-secondary" id="create-btn" type="submit" value="See all the posts">
+      </form>
+    </div>
+</div>
+
+<%- include('partials/footer.ejs') %>

@@ -1,0 +1,89 @@
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+
+
+
+.my-img{
+  border-radius: 50%;
+  width: 400px;
+}
+
+#welcome-section{
+  height: 80vh;
+}
+
+.logo-img{
+  height: 35px;
+}
+
+#tecnical-skills-section{
+  height: 50vh;
+}
+
+.home-div{
+    height: 70vh;
+    display: block;
+    text-align: center;
+    margin-top: 1em;
+    padding: 10em;
+}
+#posts-navbar, #web-page-navbar{
+    font-weight:400;
+    font-size: 1.5rem;
+}
+
+#create-btn, #submit-post-btn{
+    background-color: white;
+    border: none;
+    margin-top: 1em;
+}
+
+#create-btn:hover, #submit-post-btn:hover{
+    color: black;
+    font-weight: bold;
+}
+
+.post-form-div, .post-list-div, .post-div, #delete-div, #posts-div{
+    height: 70vh;
+    margin-top: 2rem;
+}
+
+#post-text, #edit-post-text{
+    height: 30%;
+    width: 80%;
+    margin-top: 4em;
+    vertical-align: top;
+}
+
+#submit-post-btn, #save-post-btn{
+    margin-top: 2rem;
+    
+}
+
+#post-btns{
+  display: flex;
+  justify-content: right;
+}
+
+.btns{
+  border: none;
+  background-color: white;
+}
+
+#delete-div, #posts-div{
+  text-align: center;
+  justify-content: center;
+}
+
+.title-link{
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+#home-tbns-div{
+  display: flex;
+  justify-content: center;
+}
